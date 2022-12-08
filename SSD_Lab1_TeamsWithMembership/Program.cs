@@ -64,12 +64,6 @@ namespace SSD_Lab1_TeamsWithMembership
                 await next();
             });
 
-            app.UseCookiePolicy(new CookiePolicyOptions
-            {
-                HttpOnly = Microsoft.AspNetCore.CookiePolicy.HttpOnlyPolicy.Always,
-                Secure = CookieSecurePolicy.Always
-            });
-
             app.UseRouting();
 
             app.UseAuthentication();
